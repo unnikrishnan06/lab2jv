@@ -19,9 +19,9 @@ public class Lab4 {
             "Bread",
             "Apples",
             "Chicken",
-            "Rice"
-            "apples"
-            "oranges"
+            "Rice",
+            "apples",
+            "oranges",
         };
  
  
@@ -37,6 +37,9 @@ public class Lab4 {
         // ================================================
         ArrayList<String> groceryList = new ArrayList<>();
  
+    for (String item : groceries) {
+        groceryList.add(item);
+    }
         // TODO: Loop through the array and add items to groceryList
         
  
@@ -47,7 +50,10 @@ public class Lab4 {
         // Remove one item by name or index
         // Print the updated ArrayList
         // ================================================
-        
+        groceryList.add("mango");
+        groceryList.add("cereal");
+        groceryList.remove("Eggs");
+        System.out.println(groceryList);
  
  
  
