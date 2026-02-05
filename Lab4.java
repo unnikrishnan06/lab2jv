@@ -20,7 +20,6 @@ public class Lab4 {
             "Apples",
             "Chicken",
             "Rice",
-            "apples",
             "oranges",
         };
  
@@ -28,7 +27,7 @@ public class Lab4 {
         // ================================================
         // STEP 2: Print the array using Arrays.toString()
         // ================================================
-       system.out.println(arrays.toString(groceries));
+       System.out.println(Arrays.toString(groceries));
  
  
         // ================================================
@@ -62,13 +61,24 @@ public class Lab4 {
         // Hint: vowels = a, e, i, o, u
         // Use .toLowerCase(). startsWith()
         // ================================================
-        
+        int vowelCount = 0;
+        for (String item : groceryList) {
+            String lowerItem = item.toLowerCase();
+
+            if (lowerItem.startsWith("a") ||
+             lowerItem.startsWith("e") ||
+             lowerItem.startsWith("i") ||
+             lowerItem.startsWith("o") ||
+             lowerItem.startsWith("u")) {
+                vowelCount++;
+            }
+        }
  
  
         // ================================================
         // STEP 6: Print the final results
         // ================================================
         
- 
+System.out.println("items that start with a vowel: " + vowelCount);
     }
 }
