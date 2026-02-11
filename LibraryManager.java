@@ -42,8 +42,32 @@ public class LibraryManager {
 
                 System.out.println("Book added successfully!");
             }
-        }
+            else if (choice == 2) {
+                // Display all books
+                if (bookList.size() == 0) {
+                    System.out.println("No books available.");
+                } else {
+                    for (Book b : bookList) {
+                        b.displayInfo();
+                    }
+                }
 
+            } else if (choice == 3) {
+                // Display available books
+                boolean found = false;
+
+                for (Book b : bookList) {
+                    if (b.getIsAvailable()) {
+                        b.displayInfo();
+                        found = true;
+                    }
+                }
+
+                if (!found) {
+                    System.out.println("No available books.");
+                }
+            }
+        }
         input.close();
     }
 }
