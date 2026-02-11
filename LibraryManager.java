@@ -26,6 +26,22 @@ public class LibraryManager {
 
             choice = input.nextInt();
             input.nextLine(); 
+            if (choice == 1) {
+                // Add a new book
+                System.out.print("Enter title: ");
+                String title = input.nextLine();
+
+                System.out.print("Enter author: ");
+                String author = input.nextLine();
+
+                System.out.print("Enter ISBN: ");
+                String isbn = input.nextLine();
+
+                Book newBook = new Book(title, author, isbn);
+                bookList.add(newBook);
+
+                System.out.println("Book added successfully!");
+            }
         }
 
         input.close();
