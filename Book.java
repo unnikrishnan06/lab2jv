@@ -28,8 +28,14 @@ public class Book {
     public String getBookISBN() {
         return bookISBN;
     }
-
     public boolean getIsAvailable() {
         return isAvailable;
+    }
+     public void displayInfo() {
+        System.out.println("Title  : " + bookTitle);
+        System.out.println("Author : " + bookAuthor);
+        System.out.println("ISBN   : " + bookISBN);
+        System.out.println("Status : " + (isAvailable ? "Available" : "Not Available"));
+        System.out.println("------------------------");
     }
 }
