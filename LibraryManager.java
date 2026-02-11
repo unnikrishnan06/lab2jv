@@ -53,20 +53,37 @@ public class LibraryManager {
                 }
 
             } else if (choice == 3) {
-                // Display available books
-                boolean found = false;
+         boolean found = false;
 
-                for (Book b : bookList) {
-                    if (b.getIsAvailable()) {
-                        b.displayInfo();
-                        found = true;
-                    }
-                }
+        for (Book b : bookList) {
+        if (b.getIsAvailable()) {
+            b.displayInfo();
+            found = true;
+        }
+    }
 
-                if (!found) {
-                    System.out.println("No available books.");
-                }
-            }
+        if (!found) {
+        System.out.println("No available books.");
+    }
+
+}
+ else if (choice == 4) {
+    System.out.print("Enter author name: ");
+    String searchAuthor = input.nextLine();
+
+    boolean found = false;
+
+    for (Book b : bookList) {
+        if (b.getBookAuthor().equalsIgnoreCase(searchAuthor)) {
+            b.displayInfo();
+            found = true;
+        }
+    }
+
+    if (!found) {
+        System.out.println("No books found for that author.");
+    }
+}
         }
         input.close();
     }
