@@ -58,36 +58,23 @@ public class StudentValidatorLab{
         // STEP 6:
         // Validate email format
  
+        System.out.print("Enter email: ");
+        String email = scanner.nextLine();
 
-
-
-        
- 
- 
- 
+        if (email.matches(".+@.+\\..+")) {
+            System.out.println("Email is valid");
+        } else {
+            System.out.println("Invalid email");
+        }
         // =====================================================
         // PART 4 — SENTENCE PROCESSING
         // =====================================================
- 
- 
         // STEP 7:
         // Ask user to enter a sentence
- 
- 
- 
- 
         // STEP 8:
         // Count vowels using Character class
- 
- 
- 
- 
         // STEP 9:
         // Reverse sentence using StringBuilder
- 
- 
- 
- 
         // STEP 10:
         // Replace all digits in sentence with '*'
  
@@ -97,8 +84,6 @@ public class StudentValidatorLab{
         // =====================================================
         // PART 5 — TOKENIZING
         // =====================================================
- 
- 
         // STEP 11:
         // Create string: "Math,Science,Java,English"
         // Split using comma
@@ -110,8 +95,6 @@ public class StudentValidatorLab{
         // =====================================================
         // PART 6 — PATTERN & MATCHER
         // =====================================================
- 
- 
         // STEP 12:
         // Create string: "Invoice number is 4567 and total is 890"
         // Use Pattern and Matcher to extract all numbers
