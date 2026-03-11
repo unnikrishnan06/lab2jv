@@ -77,10 +77,21 @@ public class StudentValidatorLab{
         // Reverse sentence using StringBuilder
         // STEP 10:
         // Replace all digits in sentence with '*'
- 
- 
- 
- 
+  System.out.print("Enter a sentence: ");
+        String sentence = scanner.nextLine();
+        // count vowels
+        int count = 0;
+        for (int i = 0; i < sentence.length(); i++) {
+            char ch = Character.toLowerCase(sentence.charAt(i));
+            if ("aeiou".indexOf(ch) != -1) count++;
+        }
+        System.out.println("Vowel count: " + count);
+        // reverse sentence
+        String reversed = new StringBuilder(sentence).reverse().toString();
+        System.out.println("Reversed: " + reversed);
+        // replaced digits 
+        String replaced = sentence.replaceAll("\\d", "*");
+        System.out.println("Digit replaced: " + replaced);
         // =====================================================
         // PART 5 — TOKENIZING
         // =====================================================
