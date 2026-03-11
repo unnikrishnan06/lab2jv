@@ -38,34 +38,30 @@ public class StudentValidatorLab{
         // PART 2 — STUDENT ID VALIDATION
         // Format: S-1234
         // =====================================================
- 
- 
         // STEP 3:
         // Ask user to enter student ID
- 
- 
- 
- 
         // STEP 4:
         // Validate format using regex
- 
- 
- 
- 
+        System.out.print("Enter student ID: ");
+        String id = scanner.nextLine();
+
+        if (id.matches("S-\\d{4}")) {
+            System.out.println(" id is valid");
+        } else {
+            System.out.println("Invalid id ");
+        }
         // =====================================================
         // PART 3 — EMAIL VALIDATION
         // =====================================================
- 
- 
         // STEP 5:
         // Ask user to enter email
- 
- 
- 
- 
         // STEP 6:
         // Validate email format
  
+
+
+
+        
  
  
  
