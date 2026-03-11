@@ -99,10 +99,12 @@ public class StudentValidatorLab{
         // Create string: "Math,Science,Java,English"
         // Split using comma
         // Print each course
- 
- 
- 
- 
+        String coursesX = "math,science,java,english";
+        String[] courses = coursesX.split(",");
+        System.out.println("Courses:");
+        for (String c : courses) {
+            System.out.println(c);
+        }
         // =====================================================
         // PART 6 — PATTERN & MATCHER
         // =====================================================
